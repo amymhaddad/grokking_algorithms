@@ -34,4 +34,3 @@ def binary_search(list, item):
 
 x = binary_search(list, item)
 print(x)
-            

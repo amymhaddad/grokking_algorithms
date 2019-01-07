@@ -11,6 +11,7 @@ numbers = [1, 3, 5, 7, 9]
 item = 9
 
 #function takes a sorted list and an item. If the item is in the list, then the function returns its position.
+
 def binary_search(list, item):
     """If item is in list, return the item's position"""
 
