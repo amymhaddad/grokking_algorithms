@@ -7,30 +7,33 @@ Created on Thu May 10 15:34:22 2018
 """
 
 
-list = [1, 3, 5, 7, 9]
-item = -1
+list = [2, 4, 6, 8]
+item = 6
 
 def binary_search(list, item):
-    """If item is in the list, return the position of the item"""
-
-    #set parameters of what I'm searching
+    """If item is in list, return position of item"""
+    #Set parameters for search
     low = 0
-    high = len(list)-1
+    high = len(list) - 1
 
-    #while I haven't narrowed down the value to one element...
+    #while low and high aren't the same...
     while low <= high:
-        #mid = find the index (position) of the middle element
-        #guess = the value of the middle element. Using guess to compare with "item" that I'm passing in
+        #find index for middle ele
         mid = (low + high) // 2
+        #find value for middle ele
         guess = list[mid]
 
+        #re-assign values for low and high below
         if guess == item:
             return mid
-        if guess > item:
-            high = mid + 1
+        if guess >= item:
+            #change the high value, then start back at the top of the while loop
+            high = mid - 1
         else:
-            low = mid -1
+            #change the low value, then start back at the top of the while loop
+            low = mid + 1
     return None
+
 
 x = binary_search(list, item)
 print(x)
