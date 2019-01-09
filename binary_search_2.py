@@ -7,9 +7,6 @@ Created on Thu May 10 15:34:22 2018
 """
 
 
-list = [2, 4, 6, 8]
-item = 6
-
 def binary_search(list, item):
     """If item is in list, return position of item"""
     #Set parameters for search
